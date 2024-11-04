@@ -1,2 +1,1 @@
-## Figma URL
-Unsplash Gallery
+## Unsplash Gallery
