@@ -2,6 +2,8 @@
 
 A React application that allows users to search and browse images from the [Pexels API](https://www.pexels.com/api/).
 
+### 🌐 [Live Demo](https://your-username.github.io/your-repo-name)
+
 ## 🚀 Features
 
 - Image Search
