@@ -15,7 +15,7 @@ const SearchForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSearchTerm(inputValue);
+    inputValue && setSearchTerm(inputValue);
   };
 
   return (
