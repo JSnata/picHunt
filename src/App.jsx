@@ -14,7 +14,7 @@ const App = () => {
           <ThemeToggle />
           <SearchForm />
           <Gallery />
-          <ReactQueryDevtools initialIsOpen={false}/>
+          <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </AppProvider>
     </main>

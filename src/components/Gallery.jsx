@@ -12,7 +12,10 @@ const Gallery = () => {
   const response = useQuery({
     queryKey: ['images', searchTerm],
     queryFn: async () => {
-      const res = await axios.get(`${baseUrl}query=${searchTerm}&per_page=${perPageValue}`, { headers: { Authorization: import.meta.env.VITE_API_KEY } });
+      const res = await axios.get(
+        `${baseUrl}query=${searchTerm}&per_page=${perPageValue}`,
+        { headers: { Authorization: import.meta.env.VITE_API_KEY } }
+      );
       return res.data;
     },
   });
@@ -45,12 +48,18 @@ const Gallery = () => {
 
   console.log(response);
 
-  return <section className='image-container'>
-    {results.map((item) => {
-        const imgUrl = item?.src?.medium;
-        return <img src={imgUrl} key={item.id} alt={item.alt} className='img' />
-    })}
-  </section>;
+  return (
+<section class="image-container">
+  {results.map((item) => {
+    const imgUrl = item?.src?.medium;
+    return (
+      <div key={item.id} className="img-wrapper">
+        <img src={imgUrl} alt={item.alt} className="img" />
+      </div>
+    );
+  })}
+</section>
+  );
 };
 
 export default Gallery;
