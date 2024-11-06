@@ -8,14 +8,10 @@ const ThemeToggle = () => {
   const { isDarkTheme, toggleTheme } = useAppContext();
 
   return (
-    <Box 
-      display="flex" 
-      className="toggle-container"
-      sx={{ mb: 2 }}
-    >
-      <IconButton 
+    <Box display="flex" className="toggle-container" sx={{ mb: 2 }}>
+      <IconButton
         onClick={toggleTheme}
-        color="inherit" 
+        color="inherit"
         aria-label="toggle theme"
       >
         {isDarkTheme ? <LightModeIcon /> : <DarkModeIcon />}
