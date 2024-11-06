@@ -1,1 +1,1 @@
-## Unsplash Gallery
+## PicHunt

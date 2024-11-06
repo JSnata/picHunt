@@ -1,16 +1,21 @@
 import React from 'react';
-import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useAppContext } from '../context/context';
 
 const ThemeToggle = () => {
-  const {isDarkTheme, toggleTheme} = useAppContext();
+  const { isDarkTheme, toggleTheme } = useAppContext();
   return (
-    <section className='toggle-container'>
-        <button className='theme-toggle' onClick={() => toggleTheme()}>
-            {isDarkTheme ? <BsFillSunFill className='toggle-icon' /> : <BsFillMoonFill className='toggle-icon' />}
-        </button>
+    <section className="toggle-container">
+      <button className="theme-toggle" onClick={() => toggleTheme()}>
+        {isDarkTheme ? (
+          <LightModeIcon className="toggle-icon" />
+        ) : (
+          <DarkModeIcon className="toggle-icon" />
+        )}
+      </button>
     </section>
-  )
-}
+  );
+};
 
-export default ThemeToggle
+export default ThemeToggle;
